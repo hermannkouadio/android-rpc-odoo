@@ -26,8 +26,8 @@ import static java.util.Collections.emptyMap;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    final String url = "https://mvaccin.jconsultci.com", db = "mvaccin",
-            username = "alex@mvaccin.net", password = "admin";
+    final String url = "url", db = "db",
+            username = "usermane", password = "pwd";
     List<Object> list;
     private TextView textView;
     private Button btnCount;
