@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bng.rd.xmlrpcconnexion.models.AireLocalite;
 import com.bng.rd.xmlrpcconnexion.models.CalendarEvent;
@@ -92,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         setServerURL(new URL(String.format("%s/xmlrpc/2/object", url)));
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
+                        Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }});
             }};
@@ -145,6 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         setServerURL(new URL(String.format("%s/xmlrpc/2/object", url)));
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
+                        Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }});
             }};
@@ -255,6 +258,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 );*/
             } catch (XmlRpcException | MalformedURLException  | ClassCastException e) {
                 e.printStackTrace();
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
             }
         }).
 
@@ -268,6 +272,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             db, username, password, emptyMap()));
         } catch (XmlRpcException e) {
             e.printStackTrace();
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
         Log.e("UID", String.valueOf(uid));
         return uid;
