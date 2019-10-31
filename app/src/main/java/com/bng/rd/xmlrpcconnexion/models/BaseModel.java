@@ -5,6 +5,7 @@ package com.bng.rd.xmlrpcconnexion.models;
  */
 public class BaseModel {
     private long id;
+    private String name;
     private String write_uid;
     private String write_date;
     private String create_date;
@@ -32,6 +33,14 @@ public class BaseModel {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getWrite_uid() {
